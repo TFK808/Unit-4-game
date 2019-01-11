@@ -15,6 +15,10 @@ $(document).ready(function() {
 
     var compChoices = Math.floor(Math.random()*101+19);
 
+    //-- "compnumber"/compGuess Output to HTML --//
+    //--JS-- document.getElementById("compnumber").innerHTML =  compGuess; --//
+    $("#compnumber").text(compChoices);
+
     //-- compGuess random number generator from compChoices array --//
     //--JS-- var compGuess = compChoices[Math.floor (Math.random() * compChoices.length)]; --//
 
@@ -24,22 +28,18 @@ $(document).ready(function() {
     var crys03 = Math.floor(Math.random()*11+1);
     var crys04 = Math.floor(Math.random()*11+1);
 
-    //-- Output to HTML --//
-    //-- "compnumber"/compGuess Output to HTML --//
-    //--JS-- document.getElementById("compnumber").innerHTML =  compGuess; --//
-    $("#compnumber").text(compChoices);
 
     //-- Game Reset --//
     function reset() {
         compChoices = Math.floor(Math.random()*101 + 19);
         $("#compnumber").text(compChoices);
-        var crys01 = Math.floor(Math.random()*11+1);
-        var crys02 = Math.floor(Math.random()*11+1);
-        var crys03 = Math.floor(Math.random()*11+1);
-        var crys04 = Math.floor(Math.random()*11+1);
+        crys01 = Math.floor(Math.random()*11+1);
+        crys02 = Math.floor(Math.random()*11+1);
+        crys03 = Math.floor(Math.random()*11+1);
+        crys04 = Math.floor(Math.random()*11+1);
         userScore = 0;
         $("#totalscore").text(userScore);
-    };
+    }
 
     //-- When the User Wins function --//
     function forTheWin () {
@@ -49,7 +49,7 @@ $(document).ready(function() {
         //--JS-- document.getElementById("wins").innerHTML = wins; --//
         $("#wins").text(wins);
         reset();
-    };
+    }
 
     //-- When the User Loses function --//
     function forTheLoss () {
@@ -62,58 +62,58 @@ $(document).ready(function() {
     };
 
     //-- When user clicks on crystal01/crys01 --//
-    $("#crystal01").on(click, function() {
+    $("#crystal01").on("click", function() {
         userScore = userScore + crys01;
         //-- console.log("New userScore = " + userScore)
         $("#totalscore").text(userScore);
 
         //-- Win/Lose "if/else if" conditions--//
-        if (userScore === compChoices) {
+        if (userScore == compChoices) {
             forTheWin ();
         } else if (userScore > compChoices) {
             forTheLoss ();
         }
-    });
+    })
     
     //-- When user clicks on crystal02/crys02 --//
-    $("#crystal02").on(click, function() {
+    $("#crystal02").on("click", function() {
         userScore = userScore + crys02;
         //-- console.log("New userScore = " + userScore)
         $("#totalscore").text(userScore);
 
         //-- Win/Lose "if/else if" conditions--//
-        if (userScore === compChoices) {
+        if (userScore == compChoices) {
             forTheWin ();
         } else if (userScore > compChoices) {
             forTheLoss ();
         }
-    });
+    })
 
     //-- When user clicks on crystal03/crys03 --//
-    $("#crystal03").on(click, function() {
+    $("#crystal03").on("click", function() {
         userScore = userScore + crys03;
         //-- console.log("New userScore = " + userScore)
         $("#totalscore").text(userScore);
 
         //-- Win/Lose "if/else if" conditions--//
-        if (userScore === compChoices) {
+        if (userScore == compChoices) {
             forTheWin ();
         } else if (userScore > compChoices) {
             forTheLoss ();
         }
-    });
+    })
 
     //-- When user clicks on crystal04/crys04 --//
-    $("#crystal04").on(click, function() {
+    $("#crystal04").on("click", function() {
         userScore = userScore + crys04;
         //-- console.log("New userScore = " + userScore)
         $("#totalscore").text(userScore);
 
         //-- Win/Lose "if/else if" conditions--//
-        if (userScore === compChoices) {
+        if (userScore == compChoices) {
             forTheWin ();
         } else if (userScore > compChoices) {
             forTheLoss ();
         }
-    });
+    })
 });

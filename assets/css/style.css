@@ -55,16 +55,15 @@ body {
 }
 
 #wins {
-    font-size: 30px;
+    font-size: 100px;
 }
 
 #losses {
-    font-size: 30px;
+    font-size: 100px;
 }
 
-.record {
-    font-family: 'Staatliches', cursive;
-    font-size: 20px;
+.recordWin {
+    font-family: 'Staatliches', cursive;  
     background-color: slateblue;
     height: 100px;
     padding-top: 20px;
@@ -73,6 +72,15 @@ body {
     flex: 1;
 }
 
+.recordLoss {
+    font-family: 'Staatliches', cursive;
+    background-color: cadetblue;
+    height: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    flex: 1;
+}
 .crystals {
     margin-bottom: 30px;
 }
@@ -96,7 +104,7 @@ body {
     text-align: center;
     font-family: 'Staatliches', cursive;
     color: black;
-    font-size: 50px;
+    font-size: 100px;
     height: 100px;
     background-color: lightcyan;
     padding-top: 20px;
